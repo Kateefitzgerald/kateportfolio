@@ -1,5 +1,7 @@
 {
   "name": "kateportfolio",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "yarn": "^1.16.0"
+  }
 }

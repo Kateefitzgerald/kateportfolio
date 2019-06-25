@@ -18,7 +18,7 @@
 
 @import "components/_banner";
 @import "components/_timeline";
-@import "components/_forms"
+@import "components/_forms";
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
