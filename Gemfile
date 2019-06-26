@@ -37,6 +37,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'mail_form'
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'sprockets', '~>3.7.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
