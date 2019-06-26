@@ -1,0 +1,18 @@
+<%= form_for @contact, url: home_path, remote: true do |f| %>
+    <div id="form-container">
+        <%= f.label :name %></br>
+        <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+
+        <%= f.label :email %></br>
+        <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+
+      <%= f.label :message %></br>
+      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
+                        placeholder: "Send a message to Kate."%></br>
+
+      <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+  <div id="flash-message">
+    <%= render 'flash' %>
+  </div>
