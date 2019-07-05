@@ -12,17 +12,13 @@ class PagesController < ApplicationController
 def create
     @contact = ContactForm.new(params[:contact_form])
     @contact.request = request
-    respond_to do |format|
       if @contact.deliver
         # re-initialize Home object for cleared form
-        @contact = ContactForm.new
-        format.html { render "home"}
-        format.js   { flash.now[:success] = @message = "Thank you for your message. I'll get back to you soon!" }
-      else
-        format.html { render "home"}
-        format.js   { flash.now[:error] = @message = "Message did not send." }
+        flash.now[:error] = nil
+        redirect_to home_path, notice: 'Message sent successfully'
+        else
+        flash.now[:error] = 'Cannot send message'
+        render :new
       end
-    end
   end
-
 end
